@@ -1,0 +1,37 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://docs.iru.com/en/endpoint/integrations/ai-assistants/iru-mcp
+docs: https://docs.iru.com/en/endpoint/api/model-context-protocol/iru-mcp
+server:
+  name: iru
+  vendor: Iru (formerly Kandji)
+  transport: http
+  hosted: true
+  url: https://YOUR_TENANT.connect.iru.com/mcp-server/connector/kandji/tools
+  description: >-
+    Official Iru-hosted, remote MCP server that exposes the Iru Endpoint
+    Management (Enterprise) API surface as MCP tools for AI assistants. Enabled
+    per API token (the "Enable MCP" toggle when creating a token); connect
+    Cursor, Claude Desktop, OpenAI Codex, or other MCP-enabled clients to query
+    devices, Blueprints, and Library Items and take allowed actions in natural
+    language. The tool set expands automatically as Iru adds Enterprise API
+    capabilities. MCP calls count toward the same 10,000 requests/hour/tenant
+    rate limit as the REST API.
+authentication:
+  type: header
+  headers:
+    - name: X-API-Key
+      description: Iru API bearer token, prefixed with "sk_live:".
+    - name: X-MCP-Profile
+      description: Tenant-specific MCP profile identifier.
+supported_clients:
+  - Claude Desktop
+  - Cursor
+  - OpenAI Codex
+notes: >-
+  Iru also publishes MCP configuration inline in the Access UI: when a token has
+  MCP enabled, the one-time token screen shows a copyable JSON MCP configuration
+  block (MCP URL + auth values). A separate community-built local (FastMCP)
+  bridge exists at github.com/mangopudding/mcp-server-iru-api (~23 tools) but is
+  not first-party.

@@ -1,23 +1,84 @@
 aid: iru
 name: Iru
-description: Iru is a company surfaced as a portfolio company of felicis, general-catalyst, sv-angel and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Iru (formerly Kandji) is an enterprise IT and security company that unifies
+  device management, endpoint security, workforce identity, and compliance
+  automation into a single AI-powered platform, trusted by 6,000+ organizations
+  including Airbus, Plaid, and Vercel. Its three core products are Endpoint
+  (Apple, Windows, and Android device management, threat detection and response,
+  and vulnerability scanning via a single lightweight agent), Identity
+  (passwordless, device-bound workforce access), and Compliance (AI-driven,
+  audit-ready compliance monitoring with a public Trust Center). For developers,
+  Iru exposes the Iru Endpoint Management REST API (tenant-scoped bearer tokens,
+  10,000 requests/hour/tenant, US and EU regions), an official hosted MCP server
+  for AI assistants, first-party Python tooling (iructl, irupkg), and a Postman
+  collection.
 url: https://raw.githubusercontent.com/api-evangelist/iru/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.iru.com/hubfs/assets/favicons/og-image.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - felicis
 - general-catalyst
 - sv-angel
-x-tier: stub
+- tiger-global
+- greycroft
+- first-round-capital
+x-tier: enriched
 x-tier-reason: portfolio-lead
+x-former-name: Kandji
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Device Management
+- Apple MDM
+- Endpoint Security
+- Identity and Access Management
+- Compliance
+- Vulnerability Management
+- IT Management
+- Security
+apis:
+- name: Iru Endpoint Management API
+  description: >-
+    REST/JSON API for the Iru (formerly Kandji) endpoint management platform:
+    read fleet data and run device actions, manage apps, Library items, Library
+    uploads, Blueprints, tenant activity, and Automated Device Enrollment (ADE)
+    tokens. Authenticated with tenant-level bearer tokens; 10,000
+    requests/hour/tenant; US and EU regional hosts.
+  humanURL: https://api-docs.iru.com
+  baseURL: https://SUBDOMAIN.api.kandji.io/api/v1
+  tags:
+  - Device Management
+  - Apple MDM
+  - Endpoint Security
+  properties:
+  - type: APIReference
+    url: https://api-docs.iru.com
+  - type: GettingStarted
+    url: https://docs.iru.com/en/endpoint/api/iru-api-overview.md
+  - type: Authentication
+    url: authentication/iru-authentication.yml
+  - type: RateLimits
+    url: rate-limits/iru-rate-limits.yml
+  - type: Conventions
+    url: conventions/iru-conventions.yml
+  - type: Postman
+    url: https://docs.iru.com/en/endpoint/api/how-to-set-up-the-iru-endpoint-api-in-postman.md
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +87,58 @@ maintainers:
 common:
 - type: Website
   url: https://iru.com
+- type: DeveloperPortal
+  url: https://docs.iru.com
+- type: Documentation
+  url: https://docs.iru.com
+- type: APIReference
+  url: https://api-docs.iru.com
+- type: GettingStarted
+  url: https://docs.iru.com/en/endpoint/api/iru-api-overview.md
+- type: Support
+  url: https://support.kandji.io
+- type: Blog
+  url: https://iru.com/blog
+- type: Pricing
+  url: https://iru.com/pricing
+- type: SignUp
+  url: https://iru.com/request-demo
+- type: Login
+  url: https://iru.com/login
+- type: TermsOfService
+  url: https://iru.com/legal/terms
+- type: PrivacyPolicy
+  url: https://iru.com/legal/privacy
+- type: GitHubOrganization
+  url: https://github.com/kandji-inc
+- type: StatusPage
+  url: https://status.iru.com
+- type: Authentication
+  url: authentication/iru-authentication.yml
+- type: RateLimits
+  url: rate-limits/iru-rate-limits.yml
+- type: Conventions
+  url: conventions/iru-conventions.yml
+- type: Lifecycle
+  url: lifecycle/iru-lifecycle.yml
+- type: MCPServer
+  url: mcp/iru-mcp.yml
+- type: Packages
+  url: packages/iru-packages.yml
+- type: SDKs
+  url: packages/iru-packages.yml
+- type: CLI
+  url: cli/iru-cli.yml
+- type: LLMsTxt
+  url: llms/iru-llms.txt
+- type: Conformance
+  url: conformance/iru-conformance.yml
+- type: TrustCenter
+  url: security/iru-trust-center.yml
+- type: DomainSecurity
+  url: security/iru-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

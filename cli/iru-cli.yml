@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/kandji-inc/iructl
+clis:
+  - name: iructl
+    official: true
+    language: python
+    install:
+      - pip install iructl
+    repo: https://github.com/kandji-inc/iructl
+    package: https://pypi.org/project/iructl/
+    description: >-
+      Iru Control - first-party command-line utility for local management of
+      Iru (formerly Kandji) resources such as Blueprints and Library Items,
+      driven by a tenant API token. Supports version-control ("config as code")
+      workflows over tenant configuration.
+  - name: irupkg
+    official: true
+    language: python
+    install:
+      - git clone https://github.com/kandji-inc/irupkg
+    repo: https://github.com/kandji-inc/irupkg
+    description: >-
+      Standalone command-line tool for programmatic management of Iru Custom
+      Apps (packaging and pushing custom software to the tenant Library).
+notes: >-
+  Iru does not publish a single unified branded CLI binary; iructl and irupkg
+  are the first-party command-line tools under the kandji-inc org. Both
+  authenticate with a tenant-level API token and target the tenant API host
+  (<subdomain>.api.kandji.io).

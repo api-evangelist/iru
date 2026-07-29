@@ -1,0 +1,57 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/kandji-inc
+notes: >-
+  Iru (formerly Kandji) does not publish a first-party language SDK for the
+  Endpoint Management REST API; its official developer tooling is a set of
+  Python utilities and AutoPkg processors published under the kandji-inc GitHub
+  organization. iructl is the one that is also distributed on PyPI. Two
+  well-known community Python wrappers are listed as official:false.
+packages:
+  - language: python
+    registry: pypi
+    name: iructl
+    url: https://pypi.org/project/iructl/
+    repo: https://github.com/kandji-inc/iructl
+    install: pip install iructl
+    official: true
+    description: >-
+      Iru Control - a utility for local management of Iru resources
+      (Blueprints, Library Items, and other tenant resources).
+  - language: python
+    registry: github
+    name: irupkg
+    url: https://github.com/kandji-inc/irupkg
+    install: git clone https://github.com/kandji-inc/irupkg
+    official: true
+    description: >-
+      Standalone Python tool for programmatic management of Iru Custom Apps.
+  - language: python
+    registry: github
+    name: IOTA
+    url: https://github.com/kandji-inc/IOTA
+    install: git clone https://github.com/kandji-inc/IOTA
+    official: true
+    description: >-
+      AutoPkg processor for programmatic administration of Iru Custom Apps.
+  - language: shell
+    registry: github
+    name: security-toolkit
+    url: https://github.com/kandji-inc/security-toolkit
+    official: true
+    description: Security toolkit scripts from the Kandji/Iru support team.
+  - language: python
+    registry: pypi
+    name: kandji
+    url: https://pypi.org/project/kandji/
+    repo: https://github.com/frefrik/python-kandji
+    install: pip install kandji
+    official: false
+    description: >-
+      Community Python wrapper for the Kandji API (author Fredrik Haarstad).
+  - language: python
+    registry: github
+    name: kandji-python-sdk
+    url: https://github.com/mscottblake/kandji-python-sdk
+    official: false
+    description: Community Python SDK for the Kandji API.

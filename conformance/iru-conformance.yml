@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.iru.com/en/endpoint/api/iru-api-overview.md
+standards:
+  - id: rest-json
+    conforms: true
+    evidence: Iru Endpoint Management API is a REST/JSON HTTP API over the tenant host.
+  - id: http-bearer-token
+    conforms: true
+    evidence: Tenant-level bearer tokens in the Authorization header (RFC 6750 style).
+  - id: oauth2
+    conforms: false
+    evidence: No OAuth2 authorization server or flows documented for the API; auth is static bearer token.
+  - id: openid-connect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: unknown
+    evidence: JSON error bodies returned; application/problem+json not confirmed in docs.
+  - id: mcp
+    conforms: true
+    evidence: Official hosted Model Context Protocol server exposes the Enterprise API as MCP tools.
+  - id: pagination-limit-offset
+    conforms: true
+    evidence: List endpoints support limit/offset query parameters.

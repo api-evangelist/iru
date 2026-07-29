@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://api-docs.iru.com/
+versioning:
+  scheme: uri-path
+  current: v1
+  docs: https://api-docs.iru.com/
+  notes: >-
+    The Iru Endpoint Management REST API is versioned in the URI path (v1) on
+    the tenant host, e.g. https://<subdomain>.api.kandji.io/api/v1/. Regional
+    hosts: US (<subdomain>.api.kandji.io) and EU (<subdomain>.api.eu.kandji.io).
+status_page: https://status.iru.com
+status_pages:
+  - https://status.iru.com
+  - https://status.kandji.io
+sla:
+  url: null
+  uptime_target: null
+deprecation:
+  policy_url: null
+  sunset_header: null
+  notes: >-
+    No public API deprecation policy or RFC 8594 Sunset/Deprecation header
+    support was found in the documentation as of this pass.
+brand_transition:
+  from: Kandji
+  to: Iru
+  note: >-
+    Kandji rebranded to Iru. Many API URLs and docs continue to reference the
+    kandji.io domain (api.kandji.io hosts, api-docs.kandji.io -> api-docs.iru.com).

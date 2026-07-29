@@ -1,0 +1,22 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+url: https://trust.iru.com
+alternate_urls:
+  - https://trust.kandji.io
+  - https://security.kandji.io
+certifications: []
+certifications_note: >-
+  A public Iru Trust Center is live at trust.iru.com (HTTP 200) and is a
+  productized part of the Iru Compliance offering. The page is a
+  client-rendered application whose specific named certifications (e.g. SOC 2,
+  ISO 27001) could not be machine-read in this pass, so none are asserted here.
+  Because no certification could be verified verbatim, no `Compliance` pointer
+  is emitted. Re-run with a rendering fetch to capture the named certifications.
+evidence:
+  - source: https://trust.iru.com
+    kind: trust-center
+    status: 200
+  - source: https://trust.kandji.io
+    kind: trust-center
+    status: 200
